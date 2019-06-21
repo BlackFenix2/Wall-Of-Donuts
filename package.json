@@ -6,16 +6,22 @@
   "author": "Ernie Francis <devin_98@msn.com>",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop --open",
     "lint": "tsc && yarn eslint --ext .ts,.tsx . --fix && yarn pretty-quick",
     "start": "yarn develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "array-move": "^2.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-sortable-hoc": "^1.9.1"
   },
   "devDependencies": {
     "@emotion/core": "^10.0.10",
@@ -47,9 +53,7 @@
     "pretty-quick": "^1.11.1",
     "typescript": "^3.5.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "UNLICENSE",
   "repository": {
     "type": "git",
