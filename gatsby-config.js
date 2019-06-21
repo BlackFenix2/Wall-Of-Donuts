@@ -6,12 +6,7 @@ module.exports = {
     author: '@gatsbyjs'
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-transition-link',
-      options: {
-        layout: require.resolve(`./src/layouts/index.tsx`)
-      }
-    },
+    'gatsby-plugin-layout',
     'gatsby-plugin-eslint',
     'gatsby-plugin-typescript',
     'gatsby-plugin-emotion',
