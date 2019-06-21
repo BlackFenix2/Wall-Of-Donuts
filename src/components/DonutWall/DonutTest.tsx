@@ -6,6 +6,7 @@ import image from 'src/lib/img/donuts/sprinkles.png';
 interface Props {
   topping?: 'vanilla' | 'chocolate' | 'strawberry';
   drizzle?: 'sprinkles';
+  Filled?: boolean;
 }
 
 const style = css`
@@ -16,7 +17,9 @@ const style = css`
   position: relative;
   background: radial-gradient(#eacb9e, #c45700);
   box-shadow: 0px 1px 4px 2px #00000045;
+`;
 
+const donutHole = css`
   /*donut hole*/
   &:after {
     content: '';
@@ -28,9 +31,9 @@ const style = css`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0px 1px 4px 2px #00000045;
   }
 `;
-
 const drizzles = css`
   width: 170px;
   height: 170px;
@@ -108,7 +111,7 @@ const checkDrizzle = drizzle => {
 };
 
 const DonutTest: React.FunctionComponent<Props> = props => (
-  <div css={[style, checkToppings(props.topping)]}>
+  <div css={[style, checkToppings(props.topping), !props.Filled && donutHole]}>
     <div css={checkDrizzle(props.drizzle)} />
   </div>
 );

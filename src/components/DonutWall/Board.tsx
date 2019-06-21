@@ -32,7 +32,11 @@ const style = css`
 
 const SortableItem = SortableElement(({ value }) => (
   <div>
-    <DonutTest topping={value.topping} drizzle={value.drizzle} />
+    <DonutTest
+      topping={value.topping}
+      drizzle={value.drizzle}
+      Filled={value.filled}
+    />
     {value.content}
   </div>
 ));

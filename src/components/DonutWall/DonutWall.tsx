@@ -7,6 +7,7 @@ export interface DonutProps {
   content: string;
   topping?: 'vanilla' | 'chocolate' | 'strawberry';
   drizzle?: 'sprinkles';
+  filled?: boolean;
 }
 
 const donuts: DonutProps[] = [
@@ -68,7 +69,8 @@ const donuts: DonutProps[] = [
   {
     content: `Pink Donut`,
     topping: 'strawberry',
-    drizzle: 'sprinkles'
+    drizzle: 'sprinkles',
+    filled: true
   }
 ];
 
