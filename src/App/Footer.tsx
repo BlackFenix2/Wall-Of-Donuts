@@ -19,7 +19,7 @@ export const Footer = () => (
         padding: 10px;
       `}
     >
-      <TabLink href="https://github.com/BlackFenix2/Portfolio">
+      <TabLink href="https://github.com/BlackFenix2/Wall-Of-Donuts">
         <FontAwesomeIcon icon={['fab', 'github']} size="2x" />
       </TabLink>
     </div>

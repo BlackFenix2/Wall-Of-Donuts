@@ -1,5 +1,6 @@
 import React from 'react';
 import { css, keyframes } from '@emotion/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavBar from './NavBar';
 
 const sticky = css`
@@ -42,10 +43,19 @@ const spin = css`
 
 export const Header = () => (
   <header css={style}>
-    <div>Ay Yo! i am the Header</div>
+    <div
+      css={css`
+        padding: 8px 16px;
+      `}
+    >
+      Wall of Donuts!{' '}
+      <span role="img" aria-label="Image">
+        🍰
+      </span>
+    </div>
     <NavBar />
     <div>
-      <i css={spin}>X</i>
+      <FontAwesomeIcon icon={['fas', 'bars']} size="2x" />
     </div>
   </header>
 );

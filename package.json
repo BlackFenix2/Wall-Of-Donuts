@@ -9,7 +9,7 @@
     "develop": "gatsby develop --open",
     "lint": "tsc && yarn eslint --ext .ts,.tsx . --fix && yarn pretty-quick",
     "start": "yarn develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --open",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
