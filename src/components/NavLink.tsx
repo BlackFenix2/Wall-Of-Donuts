@@ -19,7 +19,11 @@ interface Props {
 }
 
 const NavLink: FunctionComponent<Props> = props => (
-  <Link to={props.to} css={style} activeStyle={{ color: 'red' }}>
+  <Link
+    to={props.to}
+    css={style}
+    activeStyle={{ backgroundColor: 'lightgrey' }}
+  >
     {props.children}
   </Link>
 );
