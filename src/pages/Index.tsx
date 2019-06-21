@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import SEO from 'src/components/SEO';
-import Image from 'src/components/Image';
 import { css } from '@emotion/core';
 
 import img from 'src/images/Construction.png';

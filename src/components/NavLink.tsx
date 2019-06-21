@@ -18,12 +18,8 @@ interface Props {
   to: string;
 }
 
-const test = css`
-  color: red;
-`;
-
 const NavLink: FunctionComponent<Props> = props => (
-  <Link to={props.to} css={style} activeClassName={test.name}>
+  <Link to={props.to} css={style} activeStyle={{ color: 'red' }}>
     {props.children}
   </Link>
 );

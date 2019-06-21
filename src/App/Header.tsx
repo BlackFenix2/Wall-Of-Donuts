@@ -28,18 +28,18 @@ to{
 
 `;
 
-const spin = css`
-  display: inline-block;
-  cursor: pointer;
-  animation: 3s ${spinAnimation} linear;
-  &:hover {
-    animation: 3s ${spinAnimation} linear reverse;
-  }
+// const spin = css`
+//   display: inline-block;
+//   cursor: pointer;
+//   animation: 3s ${spinAnimation} linear;
+//   &:hover {
+//     animation: 3s ${spinAnimation} linear reverse;
+//   }
 
-  &:active {
-    animation: 3s ${spinAnimation} linear infinite;
-  }
-`;
+//   &:active {
+//     animation: 3s ${spinAnimation} linear infinite;
+//   }
+// `;
 
 export const Header = () => (
   <header css={style}>

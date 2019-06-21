@@ -1,38 +1,44 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`
+    title: 'Wall of Donuts',
+    description:
+      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+    author: '@gatsbyjs'
   },
   plugins: [
-    `gatsby-plugin-layout`,
-    'gatsby-plugin-eslint',
-    `gatsby-plugin-typescript`,
-    'gatsby-plugin-emotion',
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-transition-link',
       options: {
-        name: `images`,
+        layout: require.resolve(`./src/layouts/index.tsx`)
+      }
+    },
+    'gatsby-plugin-eslint',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
         path: `${__dirname}/src/images`
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `wall-of-donuts`,
-        short_name: `donutwall`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/Icon.png` // This path is relative to the root of the site.
+        name: 'wall-of-donuts',
+        short_name: 'donutwall',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/Icon.png' // This path is relative to the root of the site.
       }
     },
     {
-      resolve: `gatsby-plugin-alias-imports`,
+      resolve: 'gatsby-plugin-alias-imports',
       options: {
         alias: {
           src: 'src'
@@ -41,6 +47,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`
+    'gatsby-plugin-offline'
   ]
 };
