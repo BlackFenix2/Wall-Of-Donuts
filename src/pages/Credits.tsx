@@ -8,7 +8,7 @@ const Credits = () => (
     <div>
       images/vectors
       <p>
-        Food vector created by freepik -
+        Food vectors created by freepik -
         <TabLink href="https://www.freepik.com/free-photos-vectors/food">
           <span
             css={css`
