@@ -1,6 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/core';
 
+import image from 'src/lib/img/donuts/sprinkles.png';
+
 interface Props {
   topping?: 'vanilla' | 'chocolate' | 'strawberry';
   drizzle?: 'sprinkles';
@@ -38,7 +40,7 @@ const drizzles = css`
 
 const sprinkles = css`
   ${drizzles}
-  background-image: url('src/lib/img/donuts/sprinkles.png');
+  background-image: url(${image});
   background-size: 450px;
   background-position: center;
 `;
