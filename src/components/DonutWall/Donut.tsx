@@ -1,14 +1,36 @@
 import React from 'react';
 import { css } from '@emotion/core';
 
+import image from 'src/lib/img/donuts/sprinkles.png';
+
+interface Props {
+  topping?: 'vanilla' | 'chocolate' | 'strawberry';
+  drizzle?: 'sprinkles';
+  Filled?: boolean;
+  base?: 'black' | 'powdered';
+}
+
 const style = css`
+  /*donut base*/
   width: 170px;
   height: 170px;
   border-radius: 50%;
-  margin: 30px;
   position: relative;
+  background: radial-gradient(#eacb9e, #c45700);
+  box-shadow: 0px 1px 4px 2px #00000045;
+`;
 
-  &:before {
+const donutBasePowdered = css`
+  background: radial-gradient(white, grey);
+`;
+
+const donutBaseBlack = css`
+  background: radial-gradient(chocolate, saddlebrown, grey);
+`;
+
+const donutHole = css`
+  /*donut hole*/
+  &:after {
     content: '';
     width: 65px;
     height: 65px;
@@ -18,42 +40,107 @@ const style = css`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0px 1px 4px 2px #00000045;
   }
 `;
-
-const donutStyle = css`
-  background: radial-gradient(#eacb9e, #c45700);
-  box-shadow: 0px 1px 4px 2px #00000045;
+const drizzles = css`
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  position: relative;
 `;
 
-const stickStyle = css`
-  width: 45px;
-  height: 72px;
-  background: #e3bc9f;
-  border-radius: 50px;
+const sprinkles = css`
+  ${drizzles}
+  background-image: url(${image});
+  background-size: 450px;
+  background-position: center;
+`;
+
+const glaze = css`
+  /*donut toppings*/
+  content: '';
+  padding-bottom: 150px;
+  padding-left: 150px;
   position: absolute;
-  border-bottom-left-radius: 85%;
-  border-bottom-right-radius: 100%;
-  top: 30px;
-  left: 65px;
-  transform: rotate(10deg);
-  transform-origin: center;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 1px 2px #00000045;
+`;
 
-  &:after {
-    content: '';
-    width: 45px;
-    height: 45px;
-    background: #bb7240;
-    border-radius: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
+const vanilla = css`
+  &:before {
+    ${glaze}
+
+    background: radial-gradient( white, grey);
   }
 `;
 
-const Donut = props => (
-  <div css={[style, props.active && donutStyle]}>
-    <div css={stickStyle} />
+const chocolate = css`
+  &:before {
+    ${glaze}
+    background: radial-gradient(chocolate, saddlebrown);
+  }
+`;
+
+const strawberry = css`
+  &:before {
+    ${glaze}
+    background: radial-gradient(#fc5a8d, #f07f9c);
+  }
+`;
+
+/** checks incoming props to doncitionally style donut toppings */
+const checkToppings = toppings => {
+  switch (toppings) {
+    case 'chocolate':
+      return chocolate;
+    case 'vanilla':
+      return vanilla;
+    case 'strawberry':
+      return strawberry;
+    default:
+      break;
+  }
+  return null;
+};
+
+/** checks incoming props to conditionally style donut toppings */
+const checkDrizzle = drizzle => {
+  switch (drizzle) {
+    case 'sprinkles':
+      return sprinkles;
+
+    default:
+      break;
+  }
+  return null;
+};
+
+const checkBase = base => {
+  switch (base) {
+    case 'powdered':
+      return donutBasePowdered;
+    case 'black':
+      return donutBaseBlack;
+
+    default:
+      break;
+  }
+  return null;
+};
+const DonutTest: React.FunctionComponent<Props> = props => (
+  <div
+    css={[
+      style,
+      checkBase(props.base),
+      checkToppings(props.topping),
+      !props.Filled && donutHole
+    ]}
+  >
+    <div css={checkDrizzle(props.drizzle)} />
   </div>
 );
-export default Donut;
+export default DonutTest;

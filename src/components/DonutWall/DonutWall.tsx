@@ -5,6 +5,7 @@ import Board from './Board';
 export interface DonutProps {
   id?: string;
   content: string;
+  base?: 'black' | 'powdered';
   topping?: 'vanilla' | 'chocolate' | 'strawberry';
   drizzle?: 'sprinkles';
   filled?: boolean;
@@ -12,19 +13,19 @@ export interface DonutProps {
 
 const donuts: DonutProps[] = [
   {
-    content: `Pink Donut`,
-    topping: 'strawberry',
+    content: `Vanilla Kreme`,
+    topping: 'vanilla',
+    filled: true
+  },
+  {
+    content: `Chocolate Overload`,
+    base: 'black',
     drizzle: 'sprinkles'
   },
   {
-    content: `Pink Donut`,
-    topping: 'strawberry',
-    drizzle: 'sprinkles'
-  },
-  {
-    content: `Pink Donut`,
-    topping: 'strawberry',
-    drizzle: 'sprinkles'
+    base: 'powdered',
+    content: `Vanilla Powder`,
+    topping: 'vanilla'
   },
   {
     content: `Pink Donut`,

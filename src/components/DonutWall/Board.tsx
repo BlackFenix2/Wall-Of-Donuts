@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { css } from '@emotion/core';
 import { SortableContainer, SortableElement } from 'react-sortable-hoc';
 
-import DonutTest from './DonutTest';
+import Donut from './Donut';
 import { DonutProps } from './DonutWall';
 
 interface Props {
@@ -31,14 +31,14 @@ const style = css`
 `;
 
 const SortableItem = SortableElement(({ value }) => (
-  <div>
-    <DonutTest
+  <>
+    <Donut
       topping={value.topping}
       drizzle={value.drizzle}
       Filled={value.filled}
+      base={value.base}
     />
-    {value.content}
-  </div>
+  </>
 ));
 
 const SortableList = SortableContainer(({ items }) => {
