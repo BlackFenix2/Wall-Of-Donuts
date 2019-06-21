@@ -6,6 +6,7 @@
   "author": "Ernie Francis <devin_98@msn.com>",
   "scripts": {
     "build": "gatsby build",
+    "build:serve": "yarn build && yarn serve",
     "develop": "gatsby develop --open",
     "lint": "tsc && yarn eslint --ext .ts,.tsx . --fix && yarn pretty-quick",
     "start": "yarn develop",
