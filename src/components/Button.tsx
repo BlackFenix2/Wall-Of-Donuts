@@ -22,7 +22,11 @@ const Button = props => {
 
   const style = [buttonStyle, theme];
 
-  return <button css={style}>{props.children}</button>;
+  return (
+    <button css={style} onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
 };
 
 export default Button;

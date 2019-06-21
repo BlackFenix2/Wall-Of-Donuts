@@ -28,13 +28,14 @@ const donuts: DonutProps[] = [
     topping: 'vanilla'
   },
   {
-    content: `Pink Donut`,
-    topping: 'strawberry',
+    content: `Swirl`,
+    base: 'powdered',
+    topping: 'chocolate',
     drizzle: 'sprinkles'
   },
   {
     content: `Pink Donut`,
-    topping: 'strawberry',
+    topping: 'vanilla',
     drizzle: 'sprinkles'
   },
   {
@@ -85,6 +86,7 @@ const DonutWall = () => {
   }) => {
     setDonutList(arrayMove(donutList, oldIndex, newIndex));
   };
+
   return (
     <div>
       <h1>Wall of Donuts</h1>

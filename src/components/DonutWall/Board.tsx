@@ -52,7 +52,13 @@ const SortableList = SortableContainer(({ items }) => {
 });
 
 const Board: FunctionComponent<Props> = props => (
-  <SortableList items={props.donutList} onSortEnd={props.setOrder} axis="xy" />
+  <>
+    <SortableList
+      items={props.donutList}
+      onSortEnd={props.setOrder}
+      axis="xy"
+    />
+  </>
 );
 
 export default Board;

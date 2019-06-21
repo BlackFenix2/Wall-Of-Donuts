@@ -3,6 +3,8 @@ import { css } from '@emotion/core';
 
 import image from 'src/lib/img/donuts/sprinkles.png';
 
+import imageChocolate from 'src/lib/img/donuts/chocolate.png';
+
 interface Props {
   topping?: 'vanilla' | 'chocolate' | 'strawberry';
   drizzle?: 'sprinkles';
@@ -47,13 +49,14 @@ const drizzles = css`
   width: 170px;
   height: 170px;
   border-radius: 50%;
+  background-size: contain;
   position: relative;
 `;
 
 const sprinkles = css`
   ${drizzles}
   background-image: url(${image});
-  background-size: 450px;
+  background-size: contain;
   background-position: center;
 `;
 
