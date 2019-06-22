@@ -2,8 +2,8 @@ import React, { FunctionComponent } from 'react';
 import { css } from '@emotion/core';
 import { SortableContainer, SortableElement } from 'react-sortable-hoc';
 
+import { DonutProps } from 'src/state/context/donutContext';
 import Donut from './Donut';
-import { DonutProps } from './DonutWall';
 
 interface Props {
   donutList: DonutProps[];

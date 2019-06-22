@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 
 import image from 'src/lib/img/donuts/sprinkles.png';
 
-import imageChocolate from 'src/lib/img/donuts/chocolate.png';
+// import imageChocolate from 'src/lib/img/donuts/chocolate.png';
 
 interface Props {
   topping?: 'vanilla' | 'chocolate' | 'strawberry';

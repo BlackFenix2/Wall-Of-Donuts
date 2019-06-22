@@ -74,11 +74,11 @@ const donuts: DonutProps[] = [
     filled: true
   }
 ];
-const DonutContext = createContext<DonutProps[]>(null);
+const DonutContext = createContext(null);
 
 const useDonut = () => useHook<DonutProps[]>(DonutContext);
 
-function DonutProvider(props) {
+function DonutProvider(props: any) {
   // initial state
   const value = ContextValue<DonutProps[]>(donuts);
   return <DonutContext.Provider value={value} {...props} />;

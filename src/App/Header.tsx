@@ -1,5 +1,5 @@
 import React from 'react';
-import { css, keyframes } from '@emotion/core';
+import { css } from '@emotion/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavBar from './NavBar';
 
@@ -18,15 +18,15 @@ const style = css`
   justify-content: space-between;
 `;
 
-const spinAnimation = keyframes`
-from{
-  transform:rotate(0deg);
-}
-to{
-  transform:rotate(360deg);
-}
+// const spinAnimation = keyframes`
+// from{
+//   transform:rotate(0deg);
+// }
+// to{
+//   transform:rotate(360deg);
+// }
 
-`;
+// `;
 
 // const spin = css`
 //   display: inline-block;
