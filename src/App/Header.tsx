@@ -50,7 +50,7 @@ export const Header = () => (
     >
       Wall of Donuts!{' '}
       <span role="img" aria-label="Image">
-        🍰
+        🍩
       </span>
     </div>
     <NavBar />
