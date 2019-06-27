@@ -7,16 +7,14 @@ import TabLink from 'src/components/TabLink';
 const style = css`
   background-color: #866539;
   color: white;
-  padding: 0 16px;
-  display: flex;
-  flex-direction: column;
+  padding: 8px 0;
 `;
 
 export const Footer = () => (
   <footer css={style}>
     <div
       css={css`
-        padding: 10px;
+        padding-bottom: 10px;
       `}
     >
       <TabLink href="https://github.com/BlackFenix2/Wall-Of-Donuts">
