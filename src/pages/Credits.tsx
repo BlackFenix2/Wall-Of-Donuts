@@ -15,7 +15,6 @@ const Credits = () => (
               text-decoration: underline;
             `}
           >
-            {' '}
             freepik.com
           </span>
         </TabLink>

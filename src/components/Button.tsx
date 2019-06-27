@@ -1,32 +1,22 @@
-import React from 'react';
-import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 
-const buttonStyle = css`
+interface Props {
+  big?: boolean;
+}
+
+const Button = styled.button<Props>`
   background-color: blue;
   color: white;
   border-style: none;
   transition: 0.2s;
   padding: 8px 16px;
   cursor: pointer;
+  font-size: ${props => (props.big ? '20px' : '')};
 
   &:hover {
     background-color: lightgrey;
     color: black;
   }
 `;
-
-const Button = props => {
-  const theme = css`
-    font-size: ${props.big ? '20px' : ''};
-  `;
-
-  const style = [buttonStyle, theme];
-
-  return (
-    <button css={style} onClick={props.onClick}>
-      {props.children}
-    </button>
-  );
-};
 
 export default Button;

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TabLink from 'src/components/TabLink';
 
 const style = css`
-  background-color: black;
+  background-color: #866539;
   color: white;
   padding: 0 16px;
   display: flex;

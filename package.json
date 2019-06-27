@@ -5,16 +5,19 @@
   "version": "0.1.0",
   "author": "Ernie Francis <devin_98@msn.com>",
   "scripts": {
+    "prebuild": "yarn",
     "build": "gatsby build",
     "build:serve": "yarn build && yarn serve",
     "develop": "gatsby develop --open",
     "lint": "tsc && yarn eslint --ext .ts,.tsx . --fix && yarn pretty-quick",
+    "prestart": "yarn develop",
     "start": "yarn develop",
     "serve": "gatsby serve --open",
     "test": "yarn jest",
     "assemble": "yarn lint && yarn test && yarn build"
   },
   "dependencies": {
+    "@emotion/styled": "^10.0.14",
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
@@ -63,15 +66,13 @@
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "UNLICENSE",
+  "keywords": ["gatsby"],
+  "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/BlackFenix2/Wall-Of-Donuts"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/BlackFenix2/Wall-Of-Donuts/issues"
   }
 }

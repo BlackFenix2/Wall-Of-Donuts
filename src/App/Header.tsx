@@ -12,7 +12,7 @@ const sticky = css`
 const style = css`
   ${sticky}
   box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.15);
-  background-color: white;
+  background-color: #fdba55;
   padding: 0 16px;
   display: flex;
   justify-content: space-between;

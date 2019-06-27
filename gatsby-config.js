@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Wall of Donuts',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs'
+      'Wall of donuts, what else needs to be said? (a lot, this is an work in progress).',
+    author: '@BlackFenix2'
   },
   plugins: [
     'gatsby-plugin-layout',
@@ -26,12 +26,13 @@ module.exports = {
         name: 'wall-of-donuts',
         short_name: 'donutwall',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#866539',
+        theme_color: '#FDBA55',
         display: 'minimal-ui',
         icon: 'src/images/Icon.png' // This path is relative to the root of the site.
       }
     },
+    //add support for absolute paths for gatsby loader
     {
       resolve: 'gatsby-plugin-alias-imports',
       options: {

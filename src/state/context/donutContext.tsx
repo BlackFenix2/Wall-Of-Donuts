@@ -58,7 +58,7 @@ const donuts: DonutProps[] = [
     drizzle: 'sprinkles'
   },
   {
-    content: `Pink Donut`,
+    content: 'Pink Donut',
     topping: 'strawberry',
     drizzle: 'sprinkles'
   },
