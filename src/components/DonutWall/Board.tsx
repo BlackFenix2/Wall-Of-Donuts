@@ -23,6 +23,7 @@ const style = css`
   > div {
     margin: 30px;
   }
+
   > div :hover {
     transition: transform 300ms;
     transform: scale(1.1);
@@ -45,7 +46,7 @@ const SortableList = SortableContainer(({ items }) => {
   return (
     <div css={style}>
       {items.map((value, index) => (
-        <SortableItem key={`item-${index}`} index={index} value={value} />
+        <SortableItem key={`item-${index}`} index={index} value={value} oncli />
       ))}
     </div>
   );

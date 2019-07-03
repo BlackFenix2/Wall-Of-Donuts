@@ -7,6 +7,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-layout',
+    'gatsby-plugin-antd',
     'gatsby-plugin-eslint',
     'gatsby-plugin-typescript',
     'gatsby-plugin-emotion',

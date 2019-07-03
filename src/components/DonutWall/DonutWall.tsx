@@ -18,6 +18,7 @@ const DonutWall = () => {
       <h1>Wall of Donuts</h1>
 
       <Board donutList={donutList} setOrder={sortEnd} />
+      <p />
     </div>
   );
 };
